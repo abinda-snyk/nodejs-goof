@@ -3,3 +3,4 @@ exclude:
   code:
     - tests/**
     - test.spec.js
+    - *.yaml
