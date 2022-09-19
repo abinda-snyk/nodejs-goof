@@ -3,4 +3,4 @@ exclude:
   code:
     - tests/**
     - test.spec.js
-    - *.yaml
+    - goof-deployment.yaml
