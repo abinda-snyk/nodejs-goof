@@ -1,6 +1,6 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 exclude:
-  code:
+  global:
     - tests/**
     - test.spec.js
     - goof-deployment.yaml
