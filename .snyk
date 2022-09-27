@@ -5,3 +5,4 @@ exclude:
     - test.spec.js
     - goof-deployment.yaml
     - Dockerfile
+    - routes/**
