@@ -4,3 +4,4 @@ exclude:
     - tests/**
     - test.spec.js
     - goof-deployment.yaml
+    - Dockerfile
