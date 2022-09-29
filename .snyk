@@ -3,6 +3,3 @@ exclude:
   global:
     - tests/**
     - test.spec.js
-    - goof-deployment.yaml
-    - Dockerfile
-    - routes/**
