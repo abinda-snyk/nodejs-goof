@@ -1,6 +1,6 @@
 version: '2.1'
 orbs:
-  snyk: snyk/snyk@1.4.0 
+  snyk: snyk/snyk@1.4.0
 jobs:
   build:
     docker:
@@ -9,9 +9,5 @@ jobs:
       - checkout
       - run: npm ci
       - snyk/scan
-      
-workflows:
-  jobs:
-    - snyk-scan:
-        fail-on-issues: false
-        monitor-on-build: true
+workflows: null
+
