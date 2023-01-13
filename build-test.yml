@@ -11,11 +11,14 @@ phases:
     commands:
       - npm install -g snyk
       - snyk auth d5d20472-5889-4c67-b002-b81bca6d5396
+      - npm install
 
   build:
     on-failure: CONTINUE
     commands:
-      - npm install
+      - echo testing now
+     finally:
       - snyk code test
+     
 
      
