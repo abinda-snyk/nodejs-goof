@@ -13,8 +13,9 @@ phases:
       - snyk auth d5d20472-5889-4c67-b002-b81bca6d5396
 
   build:
+    on-failure: CONTINUE
     commands:
       - npm install
       - snyk code test
-      - on-failure: CONTINUE
+
      
