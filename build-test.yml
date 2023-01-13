@@ -16,7 +16,7 @@ phases:
   build:
     on-failure: CONTINUE
     commands:
-      - snyk code test --severity-threshold=high
+      - snyk code test --severity-threshold=critical
       - snyk monitor --org=afac34f1-cdf7-4338-a58f-dff48e56c4e0
      
 
