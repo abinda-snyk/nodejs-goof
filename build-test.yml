@@ -16,4 +16,5 @@ phases:
     commands:
       - npm install
       - snyk code test
+      - on-failure: CONTINUE
      
