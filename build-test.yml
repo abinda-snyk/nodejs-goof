@@ -18,7 +18,8 @@ phases:
     commands:
       - snyk code test --severity-threshold=high
   post_build:
-    commands: echo Entering final stage
+    commands: 
+      - echo Entering final stage
       - snyk monitor --org=afac34f1-cdf7-4338-a58f-dff48e56c4e0
 
      
