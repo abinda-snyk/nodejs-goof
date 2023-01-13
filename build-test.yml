@@ -16,8 +16,6 @@ phases:
   build:
     on-failure: CONTINUE
     commands:
-      - echo Entered the build stage
-     finally:
       - snyk code test
      
 
