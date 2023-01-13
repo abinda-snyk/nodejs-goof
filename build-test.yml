@@ -10,9 +10,10 @@ phases:
   install:
     commands:
       - npm install -g snyk
+      - snyk auth $SNYK_TOKEN
 
   build:
     commands:
       - npm install
-      - snyk code test
+      - snyk  test
      
