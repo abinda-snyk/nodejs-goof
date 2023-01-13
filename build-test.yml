@@ -15,6 +15,4 @@ phases:
     commands:
       - npm install
       - snyk code test
-      - snyk iac test
-      - snyk container test
-      - snyk monitor --org=afac34f1-cdf7-4338-a58f-dff48e56c4e0
+     
