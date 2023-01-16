@@ -19,7 +19,7 @@ phases:
     commands:
       - snyk code test 
       
-  postbuild:
+  post_build:
     on-failure: CONTINUE
     commands:
       - echo Entered the post_build phase...
