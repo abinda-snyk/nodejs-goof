@@ -10,7 +10,7 @@ env:
 phases:
   install:
     commands:
-      - snyk auth $SNYK_TOKEN
+      - snyk auth "$SNYK_TOKEN"
       - npm install -g snyk
       - npm install
      
