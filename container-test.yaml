@@ -15,4 +15,4 @@ phases:
      
   build:
     commands:
-      - snyk container test 
+      - snyk container test abindasnyk/nodejs-goof-ab
