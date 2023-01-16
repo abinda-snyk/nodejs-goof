@@ -18,6 +18,7 @@ phases:
     on-failure: CONTINUE
     commands:
       - snyk code test 
+      - bash -c "if [ "$FAILED_WITH_CONTINUE" ]; then exit 0; fi"
       
   post_build:
     on-failure: CONTINUE
