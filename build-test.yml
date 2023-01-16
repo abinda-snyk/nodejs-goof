@@ -10,18 +10,20 @@ env:
 phases:
   install:
     commands:
-      - npm install -g snyk
       - snyk auth $SNYK_TOKEN
+      - npm install -g snyk
       - npm install
-
+      - npm install snyk-to-html -g 
+      - snyk monitor
+     
   build:
-    on-failure: CONTINUE
     commands:
-      - snyk code test --severity-threshold=high 
-      - bash -c "if [ $? -eq 1 ]; then exit 0; fi"
-  post_build:
-    commands: 
-      - echo Entering final stage
-      - snyk monitor --org=$SNKY_ORG
+      - snyk code test --severity-threshold=high --json | snyk-to-html -o result.html
+      - snyk test --severity-threshold=high
+  
+  artifacts:
+    download: true
+    paths:
+    - result.html
 
      
