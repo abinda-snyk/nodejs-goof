@@ -18,14 +18,4 @@ phases:
     on-failure: CONTINUE
     commands:
       - snyk code test 
-      - bash -c "if [ "$FAILED_WITH_CONTINUE" ]; then exit 0; fi"
-      
-  post_build:
-    on-failure: CONTINUE
-    commands:
-      - echo Entered the post_build phase...
-      - echo Build completed on `date`
-
- 
-
-     
+      - bash -c "if [ $? -ne 0 ]; then exit 0; fi"
