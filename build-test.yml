@@ -16,7 +16,7 @@ phases:
      
   build:
     commands:
-      - snyk code test
+      - snyk code test --fail-on=all
 
  
 
