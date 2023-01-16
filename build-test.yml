@@ -13,17 +13,12 @@ phases:
       - snyk auth $SNYK_TOKEN
       - npm install -g snyk
       - npm install
-      - npm install snyk-to-html -g 
-      - snyk monitor
+ 
      
   build:
     commands:
-      - snyk code test --severity-threshold=high --json | snyk-to-html -o result.html
-      - snyk test --severity-threshold=high
-  
-  artifacts:
-    download: true
-    paths:
-    - result.html
+      - snyk code test
+
+ 
 
      
